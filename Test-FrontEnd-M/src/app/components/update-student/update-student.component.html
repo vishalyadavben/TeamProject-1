@@ -1,0 +1,13 @@
+<form (ngSubmit)="updateStudent()">
+    <p></p>
+    <input type="text" [(ngModel)] = "existingData.firstName" name = "firstName">
+    <input type="text" [(ngModel)] = "existingData.lastName" name = "lastName">
+
+    <input type="number" [(ngModel)] = "existingData.rollNo" name = "rollNo">
+
+    <input type="text" [(ngModel)] = "existingData.address" name = "address">
+
+
+    <button type="submit">Update</button>
+
+</form>

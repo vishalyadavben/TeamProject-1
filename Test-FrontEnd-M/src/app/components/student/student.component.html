@@ -1,0 +1,39 @@
+
+<table>
+    <thead>
+        <tr>
+            <th>student ID</th>
+            <th>firstName</th>
+            <th>lastName</th>
+            <th>Roll no</th>
+            <th>Addres</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor = "let student of studentData">
+            <td>{{student.studentId}}</td>
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.rollNo}}</td>
+            <td>{{student.address}}</td>
+            <td><button (click) = "deleteStudent(student.studentId)">Delete</button></td>
+            <td><button (click) = "updateStudent(student)">update</button></td>
+        </tr>
+    </tbody>
+
+
+</table>
+
+
+<div>
+    <form (ngSubmit)="addStudent()">
+        <input type="number" [(ngModel)] = "AddStudent.studentId" name="studentId">
+        <input type="text" [(ngModel)] = "AddStudent.firstName" name="firstName">
+        <input type="text" [(ngModel)] = "AddStudent.lastName" name="lastName">
+        <input type="number" [(ngModel)] = "AddStudent.rollNo" name="rollNo">
+        <input type="text" [(ngModel)] = "AddStudent.address"name="address">
+        
+        <button type="submit">add student</button>
+    </form>
+</div>
